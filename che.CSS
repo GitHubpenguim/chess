@@ -1,0 +1,356 @@
+html, head .start-button{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100vh;
+    margin: 0;
+    padding: 0;
+    color: rgb(22, 204, 22); /* Change the color to red */
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    inline-size: 700px;
+    block-size: 700px;
+}
+
+.square {
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+
+/* Selects the 1st to 8th squares (1st row in an 8x8 grid) and colors the even ones black */
+
+
+/* Make every other square black */
+
+
+/* Hide the extra squares */
+
+.square.extra {
+    visibility: show;
+}
+
+
+/* Make every other square black */
+
+.square:nth-child(2n) {
+    background-color: black;
+}
+
+
+/* Adjust the color for the shifted rows */
+
+html,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    inline-size: 700px;
+    block-size: 700px;
+}
+
+.square {
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+
+/* 1st row - odd squares black */
+
+.square:nth-child(n+1):nth-child(-n+8):nth-child(odd) {
+    background-color: black;
+}
+
+
+/* 2nd row - even squares black */
+
+.square:nth-child(n+9):nth-child(-n+16):nth-child(even) {
+    background-color: black;
+}
+
+
+/* 3rd row - odd squares black */
+
+.square:nth-child(n+17):nth-child(-n+24):nth-child(odd) {
+    background-color: black;
+}
+
+
+/* 4th row - even squares black */
+
+.square:nth-child(n+25):nth-child(-n+32):nth-child(even) {
+    background-color: black;
+}
+
+
+/* 5th row - odd squares black */
+
+.square:nth-child(n+33):nth-child(-n+40):nth-child(odd) {
+    background-color: black;
+}
+
+
+/* 6th row - even squares black */
+
+.square:nth-child(n+41):nth-child(-n+48):nth-child(even) {
+    background-color: black;
+}
+
+
+/* 1st row - even squares white */
+
+.square:nth-child(n+1):nth-child(-n+8):nth-child(even) {
+    background-color: white;
+}
+
+
+/* 2nd row - odd squares white */
+
+.square:nth-child(n+9):nth-child(-n+16):nth-child(odd) {
+    background-color: white;
+}
+
+
+/* 3rd row - even squares white */
+
+.square:nth-child(n+17):nth-child(-n+24):nth-child(even) {
+    background-color: white;
+}
+
+
+/* 4th row - odd squares white */
+
+.square:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: white;
+}
+
+
+/* 5th row - even squares white */
+
+.square:nth-child(n+33):nth-child(-n+40):nth-child(even) {
+    background-color: white;
+}
+
+
+/* 6th row - odd squares white */
+
+.square:nth-child(n+41):nth-child(-n+48):nth-child(odd) {
+    background-color: white;
+}
+
+
+/* 7th row - even squares white */
+
+.square:nth-child(n+49):nth-child(-n+56):nth-child(even) {
+    background-color: white;
+}
+
+
+/* 8th row - odd squares white */
+
+.square:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: white;
+}
+
+
+/* 9th row - even squares white */
+
+.square:nth-child(n+65):nth-child(-n+72):nth-child(even) {
+    background-color: white;
+}
+
+
+/* 7th row - odd squares black */
+
+.square:nth-child(n+49):nth-child(-n+56):nth-child(odd) {
+    background-color: black;
+}
+
+
+/* 8th row - even squares black */
+
+.square:nth-child(n+57):nth-child(-n+64):nth-child(even) {
+    background-color: black;
+}
+
+
+/* 9th row - odd squares black */
+
+.square:nth-child(n+65):nth-child(-n+72):nth-child(odd) {
+    background-color: black;
+}
+
+.square {
+    border: 1px solid #000;
+    /* Change #000 to the color you want for the border */
+}
+.square::before {
+    content: "white-pawn, white-rook, white-knight, white-bishop, white-queen, white-king";
+    font-size: 60px;
+    color: #d41919;
+}
+
+.square[data-piece="black-pawn"]::before,
+.square[data-piece="black-rook"]::before,
+.square[data-piece="black-knight"]::before,
+.square[data-piece="black-bishop"]::before,
+.square[data-piece="black-queen"]::before,
+.square[data-piece="black-king"]::before {
+    color: #13c94a;
+
+}
+.data-piece {
+    content:"black-pawn, black-rook, black-knight, black-bishop, black-queen, black-king";
+    font-size: 60px;
+    color:#f0d9b5;
+}
+.square::before {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100%;
+}
+
+
+/* Add chess pieces using Unicode characters */
+.square[data-piece="white-king"]::before {
+    content: "♔";
+}
+.square[data-piece="white-king"]::before {
+    content: "♔";
+}
+
+.square[data-piece="white-queen"]::before {
+    content: "♕";
+}
+
+.square[data-piece="white-rook"]::before {
+    content: "♖";
+}
+
+.square[data-piece="white-bishop"]::before {
+    content: "♗";
+}
+
+.square[data-piece="white-knight"]::before {
+    content: "♘";
+}
+
+.square[data-piece="white-pawn"]::before {
+    content: "♙";
+}
+
+.square[data-piece="black-king"]::before {
+    content: "♚";
+}
+
+.square[data-piece="black-queen"]::before {
+    content: "♛";
+}
+
+.square[data-piece="black-rook"]::before {
+    content: "♜";
+}
+
+.square[data-piece="black-bishop"]::before {
+    content: "♝";
+}
+
+.square[data-piece="black-knight"]::before {
+    content: "♞";
+}
+
+.square[data-piece="black-pawn"]::before {
+    content: "♟︎";
+}
+
+
+
+
+.cell:nth-child(8n + 1) {
+    background-color: #f0d9b5;
+}
+
+.cell:nth-child(8n + 2) {
+    background-color: #b58863;
+}
+
+.cell:nth-child(8n + 3) {
+    background-color: #884400;
+}
+
+.cell:nth-child(8n + 4) {
+    background-color: #fff;
+}
+
+.cell:nth-child(8n + 5) {
+    background-color: #000;
+}
+
+.cell:nth-child(8n + 6) {
+    background-color: #635147;
+}
+
+.cell:nth-child(8n + 7) {
+    background-color: #8b7355;
+}
+
+.cell:nth-child(8n + 8) {
+    background-color: #d9b38d;
+}
+
+
+
+.white-pawn {
+    background-image: url('white-pawn.png');
+}
+
+.black-pawn {
+    background-image: url('black-pawn.png');
+.pieces {
+    color: blue; /* 'wp', 'wR', 'wN', 'wB', 'wQ', 'wK' */
+}}
+
+.square[data-piece="black-bishop"]::before {
+    content: "♝";
+}
+.square[data-piece="black-knight"]::before {
+    content: "♞";
+}
+.square[data-piece="black-rook"]::before {
+    content: "♜";
+}   
+.square[data-piece="black-queen"]::before {
+    content: "♛";
+}    
+.pieces {
+    cursor: move;
+}
+.square {
+    border: 1px dashed black;
+}
+.container {
+    
+}
